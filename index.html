@@ -24,8 +24,8 @@
         background: rgb(255,244,242);
         background: linear-gradient(90deg, rgba(255,244,242,1) 30%, rgba(255,240,238,1) 52%);
     ">
-        <nav class="py-5 md:px-10 lg:px-5 lg:block mx-5 md:hidden">
-            <div class="bg-white shadow-md py-2 md:px-10 lg:px-5 rounded-md navDiv h-[10vh] animasi animate-anim-navbar-close">
+        <nav class="py-5 md:px-10 lg:px-5 lg:block mx-5 ">
+            <div class="bg-white shadow-md py-2 md:px-10 lg:px-5 rounded-md navDiv pb-2 animasi animate-anim-navbar-close">
                 <div class="flex justify-between items-center">
                     <div class="flex justify-center gap-3 items-center font-bold lg:px-0 px-5">
                         <img src="img/brand.png" alt="">
@@ -47,7 +47,7 @@
                         <img src="img/navbar-icon-mobile.png" alt="" class="scale-75 btnNav open">
                     </div>
                 </div>
-                <div class="text-slate-400 flex-col justify-start items-center text-lg mt-5 gap-8 font-normal md:hidden menuNav hidden">
+                <div class="text-slate-400 flex-col justify-start items-center text-lg mt-5 gap-8 font-normal menuNav hidden">
                     <a href="#" class="transition px-6 py-2 hover:font-medium hover:bg-primary hover:text-white w-full">Home</a>
                     <a href="#" class="transition px-6 py-2 hover:font-medium hover:bg-primary hover:text-white w-full mx-auto">Fitur-Fitur</a>
                     <a href="#" class="transition px-6 py-2 hover:font-medium hover:bg-primary hover:text-white w-full mx-auto">Harga</a>
@@ -60,9 +60,9 @@
             </div>
         </nav>
 
-        <div class="px-7 py-2 md:px-7 md:py-3 lg:flex justify-center gap-20 items-center md:pt-10 lg:pt-0">
+        <div class="px-7 py-2 pb-10 md:px-10 md:py-16 lg:flex justify-center gap-20 items-center md:pt-10 lg:pt-0">
             <div class="">
-                <h1 class="font-bold font-patua text-[40px] leading-[50px] lg:leading-normal md:w-[80%] md:text-center md:mx-auto lg:w-full lg:text-start lg:text-5xl text-dark-text">Sebuah cara mudah mengatur jadwal kuliah kamu</h1>
+                <h1 class="font-bold font-patua text-[40px] leading-[50px] lg:leading-normal md:w-[80%] md:text-center md:mx-auto lg:w-full lg:text-start lg:text-5xl text-dark-text lg:mt-10">Sebuah cara mudah mengatur jadwal kuliah kamu</h1>
                 <p class="text-slate-700 mt-3 md:mt-5 md:text-xl lg:w-full lg:text-start">Datang kuliah terlambat karena ketiduran itu tidak masalah datang kuliah karena lupa jadwal itu sangatlah tidak keren. Aplikasi ini adalah sahabat kamu sekarang, brodie~</p>
                 <div class="flex justify-start items-center gap-3 mt-5">
                     <button class="bg-primary py-2 px-8 shadow-lg rounded font-normal text-white gap-3 md:text-lg lg:text-base">
@@ -455,7 +455,7 @@
                 <h1 class="font-bold text-2xl text-slate-900">Zeitplan</h1>
             </div>
             <p class="mb-5">Sebuah aplikasi yang membantu kamu untuk membuat jadwal kuliah, jadwal mabar, jadwal makan, jadwal liga inggris, dan jadwal-jadwal lainnya. Walaupun banyak error, setidaknya kami sudah berusaha semaksimal mungkin.</p>
-            <p class="mb-2">Design By Muhammad Naufal Azhar</p>
+            <p class="mb-2">Design By Muhammad Nauval Azhar</p>
             <p class="mb-2">Code By Azam Din Abdillah</p>
             <!-- <p>Design By Collosal LLC</p> -->
         </div>
@@ -495,16 +495,16 @@
         let menuNav = document.querySelector('.menuNav');
 
         btnNav.addEventListener('click', function(){
-            if (navDiv.classList.contains('h-[10vh]')) {
-                navDiv.classList.replace('h-[10vh]', 'h-[60vh]');
+            if (navDiv.classList.contains('pb-2')) {
+                navDiv.classList.replace('pb-2', 'pb-10');
                 navDiv.classList.replace('animate-anim-navbar-close', 'animate-anim-navbar');
 
                 setTimeout(function(){
                     menuNav.classList.replace('hidden', 'flex');
-                }, 500)
+                }, 200)
 
             }else{
-                navDiv.classList.replace('h-[60vh]', 'h-[10vh]');
+                navDiv.classList.replace('pb-10', 'pb-2');
                 navDiv.classList.replace('animate-anim-navbar', 'animate-anim-navbar-close');
                 menuNav.classList.replace('flex', 'hidden');
 

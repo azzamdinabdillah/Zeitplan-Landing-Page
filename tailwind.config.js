@@ -12,12 +12,12 @@ module.exports = {
       },
       keyframes: {
         openNav: {
-          "0%": { height: "12vh" },
-          "100%": { height: "60vh" },
+          "0%": { paddingBottom: "8px" },
+          "100%": { paddingBottom: "200px" },
         },
         closeNav: {
-          "0%": { height: "60vh" },
-          "100%": { height: "12vh" },
+          "0%": { paddingBottom: "200px" },
+          "100%": { paddingBottom: "8px" },
         },
       },
       animation: {
