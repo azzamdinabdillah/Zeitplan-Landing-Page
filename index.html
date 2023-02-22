@@ -24,19 +24,34 @@
         background: rgb(255,244,242);
         background: linear-gradient(90deg, rgba(255,244,242,1) 30%, rgba(255,240,238,1) 52%);
     ">
-        <nav class="py-5 px-10 hidden lg:block">
-            <div class="flex justify-between items-center bg-white shadow-md py-2 px-10 rounded-md">
-                <div class="flex justify-center gap-3 items-center font-bold">
-                    <img src="img/brand.png" alt="">
-                    <h1>ZEITPLAN</h1>
-                </div>
-                <div class="flex justify-center items-center gap-20">
-                    <div class="text-slate-400 flex justify-center items-center gap-8 font-normal">
-                        <a href="">Home</a>
-                        <a href="">Fitur-Fitur</a>
-                        <a href="">Harga</a>
-                        <a href="">Testimoni</a>
+        <nav class="py-5 md:px-10 lg:px-5 lg:block mx-5">
+            <div class="bg-white shadow-md py-2 md:px-10 lg:px-5 rounded-md navDiv h-[10vh] animasi animate-anim-navbar-close">
+                <div class="flex justify-between items-center">
+                    <div class="flex justify-center gap-3 items-center font-bold lg:px-0 px-5">
+                        <img src="img/brand.png" alt="">
+                        <h1>ZEITPLAN</h1>
                     </div>
+                    <div class="lg:flex justify-center items-center gap-20 hidden">
+                        <div class="text-slate-400 flex justify-center items-center gap-8 font-normal">
+                            <a href="">Home</a>
+                            <a href="">Fitur-Fitur</a>
+                            <a href="">Harga</a>
+                            <a href="">Testimoni</a>
+                        </div>
+                        <button class="bg-primary py-2 px-5 shadow-lg rounded font-bold text-white flex justify-center items-center m-2 gap-3">
+                            <p>Download</p>
+                            <img src="img/right-arrow.png" alt="">
+                        </button>
+                    </div>
+                    <div class="lg:hidden">
+                        <img src="img/navbar-icon-mobile.png" alt="" class="scale-75 btnNav open">
+                    </div>
+                </div>
+                <div class="text-slate-400 flex-col justify-start items-center text-lg mt-5 gap-8 font-normal lg:hidden menuNav hidden">
+                    <a href="#" class="transition px-6 py-2 hover:font-medium hover:bg-primary hover:text-white w-full">Home</a>
+                    <a href="#" class="transition px-6 py-2 hover:font-medium hover:bg-primary hover:text-white w-full mx-auto">Fitur-Fitur</a>
+                    <a href="#" class="transition px-6 py-2 hover:font-medium hover:bg-primary hover:text-white w-full mx-auto">Harga</a>
+                    <a href="#" class="transition px-6 py-2 hover:font-medium hover:bg-primary hover:text-white w-full mx-auto">Testimoni</a>
                     <button class="bg-primary py-2 px-5 shadow-lg rounded font-bold text-white flex justify-center items-center m-2 gap-3">
                         <p>Download</p>
                         <img src="img/right-arrow.png" alt="">
@@ -45,7 +60,7 @@
             </div>
         </nav>
 
-        <div class="p-7 md:p-10 lg:flex justify-center gap-20 items-center">
+        <div class="px-7 py-2 md:px-7 md:py-3 lg:flex justify-center gap-20 items-center">
             <div class="">
                 <h1 class="font-bold font-patua text-[40px] leading-[50px] lg:leading-normal md:w-[80%] md:text-center md:mx-auto lg:w-full lg:text-start lg:text-5xl text-dark-text">Sebuah cara mudah mengatur jadwal kuliah kamu</h1>
                 <p class="text-slate-700 mt-3 md:mt-5 md:text-xl lg:w-full lg:text-start">Datang kuliah terlambat karena ketiduran itu tidak masalah datang kuliah karena lupa jadwal itu sangatlah tidak keren. Aplikasi ini adalah sahabat kamu sekarang, brodie~</p>
@@ -471,5 +486,62 @@
             </div>
         </div>
     </section>
+
+
+    <script>
+        let navDiv = document.getElementsByClassName('navDiv')[0];
+        let btnNav = document.querySelector('.btnNav');
+        let open = document.querySelector('.open');
+        let menuNav = document.querySelector('.menuNav');
+
+        btnNav.addEventListener('click', function(){
+            if (navDiv.classList.contains('h-[10vh]')) {
+                navDiv.classList.replace('h-[10vh]', 'h-[60vh]');
+                navDiv.classList.replace('animate-anim-navbar-close', 'animate-anim-navbar');
+
+                setTimeout(function(){
+                    menuNav.classList.replace('hidden', 'flex');
+                }, 500)
+
+            }else{
+                navDiv.classList.replace('h-[60vh]', 'h-[10vh]');
+                navDiv.classList.replace('animate-anim-navbar', 'animate-anim-navbar-close');
+                menuNav.classList.replace('flex', 'hidden');
+
+            }
+        });
+
+
+        // btnNav.addEventListener('click', function(){
+
+        // });
+
+            // btnNav.classList.add('open');
+
+            // if (btnNav.hasAttribute('src', 'img/navbar-icon-mobile.png')) {
+            //     btnNav.addEventListener('click', function(){
+            //         navDiv.classList.add('pb-40');
+            //         navDiv.classList.add('animate-anim-navbar');
+            //         btnNav.setAttribute('src', 'img/close-icon.png');
+            //         btnNav.classList.add('btnNavClose');
+            //         btnNav.classList.remove('open');
+
+                    
+                    
+            //     });
+            // }
+
+            
+            // if (btnNav.hasAttribute('src', 'img/close-icon.png')) {
+            //             let close = document.querySelector('.bntNavClose');
+            //             close.addEventListener('click', function(){
+            //                 navDiv.classList.add('pt-40');
+            //             });
+            //         }
+
+            
+            
+
+    </script>
 </body>
 </html>
