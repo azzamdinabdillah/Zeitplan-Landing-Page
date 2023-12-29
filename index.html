@@ -1,547 +1,830 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Zeitplan</title>
 
-    <link href="/dist/output.css" rel="stylesheet">
+    <link href="/dist/output.css" rel="stylesheet" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Patua+One&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Patua+One&family=Source+Sans+Pro&display=swap"
+      rel="stylesheet"
+    />
 
     <style>
-        *{
-            font-family: 'Source Sans Pro', sans-serif;
-            box-sizing: border-box;
-        }
+      * {
+        font-family: "Source Sans Pro", sans-serif;
+        box-sizing: border-box;
+      }
     </style>
-</head>
-<body>
-    <section class="lg:px-20" style="
-        background: rgb(255,244,242);
-        background: linear-gradient(90deg, rgba(255,244,242,1) 30%, rgba(255,240,238,1) 52%);
-    ">
-        <nav class="py-5 md:px-10 lg:px-5 lg:block mx-5 ">
-            <div class="bg-white shadow-md py-2 md:px-10 lg:px-5 rounded-md navDiv pb-2 animasi animate-anim-navbar-close">
-                <div class="flex justify-between items-center">
-                    <div class="flex justify-center gap-3 items-center font-bold lg:px-0 px-5">
-                        <img src="img/brand.png" alt="">
-                        <h1>ZEITPLAN</h1>
-                    </div>
-                    <div class="lg:flex justify-center items-center gap-20 hidden">
-                        <div class="text-slate-400 flex justify-center items-center gap-8 font-normal">
-                            <a href="">Home</a>
-                            <a href="">Fitur-Fitur</a>
-                            <a href="">Harga</a>
-                            <a href="">Testimoni</a>
-                        </div>
-                        <button class="bg-primary py-2 px-5 shadow-lg rounded font-bold text-white flex justify-center items-center m-2 gap-3">
-                            <p>Download</p>
-                            <img src="img/right-arrow.png" alt="">
-                        </button>
-                    </div>
-                    <div class="lg:hidden">
-                        <img src="img/navbar-icon-mobile.png" alt="" class="scale-75 btnNav open">
-                    </div>
-                </div>
-                <div class="text-slate-400 flex-col justify-start items-center text-lg mt-5 gap-8 font-normal menuNav hidden">
-                    <a href="#" class="transition px-6 py-2 hover:font-medium hover:bg-primary hover:text-white w-full">Home</a>
-                    <a href="#" class="transition px-6 py-2 hover:font-medium hover:bg-primary hover:text-white w-full mx-auto">Fitur-Fitur</a>
-                    <a href="#" class="transition px-6 py-2 hover:font-medium hover:bg-primary hover:text-white w-full mx-auto">Harga</a>
-                    <a href="#" class="transition px-6 py-2 hover:font-medium hover:bg-primary hover:text-white w-full mx-auto">Testimoni</a>
-                    <button class="bg-primary py-2 px-5 shadow-lg rounded font-bold text-white flex justify-center items-center m-2 gap-3">
-                        <p>Download</p>
-                        <img src="img/right-arrow.png" alt="">
-                    </button>
-                </div>
+  </head>
+  <body>
+    <section
+      class="lg:px-20"
+      style="
+        background: rgb(255, 244, 242);
+        background: linear-gradient(
+          90deg,
+          rgba(255, 244, 242, 1) 30%,
+          rgba(255, 240, 238, 1) 52%
+        );
+      "
+    >
+      <nav class="py-5 md:px-10 lg:px-5 lg:block mx-5">
+        <div
+          class="bg-white shadow-md py-2 md:px-10 lg:px-5 rounded-md navDiv pb-2 animasi animate-anim-navbar-close"
+        >
+          <div class="flex justify-between items-center">
+            <div
+              class="flex justify-center gap-3 items-center font-bold lg:px-0 px-5"
+            >
+              <img src="img/brand.png" alt="" />
+              <h1>ZEITPLAN</h1>
             </div>
-        </nav>
-
-        <div class="px-7 py-2 pb-10 md:px-10 md:py-16 lg:flex justify-center gap-20 items-center md:pt-10 lg:pt-0">
-            <div class="">
-                <h1 class="font-bold font-patua text-[40px] leading-[50px] lg:leading-normal md:w-[80%] md:text-center md:mx-auto lg:w-full lg:text-start lg:text-5xl text-dark-text lg:mt-10">Sebuah cara mudah mengatur jadwal kuliah kamu</h1>
-                <p class="text-slate-700 mt-3 md:mt-5 md:text-xl lg:w-full lg:text-start">Datang kuliah terlambat karena ketiduran itu tidak masalah datang kuliah karena lupa jadwal itu sangatlah tidak keren. Aplikasi ini adalah sahabat kamu sekarang, brodie~</p>
-                <div class="flex justify-start items-center gap-3 mt-5">
-                    <button class="bg-primary py-2 px-8 shadow-lg rounded font-normal text-white gap-3 md:text-lg lg:text-base">
-                        Learn More
-                    </button>
-                    <button class="bg-primary bg-opacity-20 py-2 px-8 shadow-lg rounded font-normal text-orange-700 gap-3 md:text-lg lg:text-base">
-                        Play Demo
-                    </button>
-                </div>
-                <div class="p-10 bg-white mt-8 rounded-lg shadow-xl relative z-10 lg:w-[80%]">
-                    <!-- <div class="h-[90%] w-[60%] shadow-2xl bg-black absolute -right-40 top-1/2 -translate-y-1/2 -z-10"></div>
-                    <div class="h-[90%] w-[60%] shadow-2xl bg-black absolute right-0 top-1/2 -translate-y-1/2 -z-10"></div> -->
-                    <div class="z-20">
-                        <img src="img/star-testimoni.png" alt="">
-                        <p class="text-slate-600 my-5">“Aplikasi sialan, ini gw jadi kagak bisa alesan lagi buat bolos kelas Pak Sanusi yang galak itu! Tapi aku sekarang jadi rajin kuliah, terima kasih garena!”</p>
-                        <div class="md:flex justify-between items-center">
-                            <div class="flex justify-center gap-5 items-center">
-                                <img src="img/testimoni-client-1.png" alt="">
-                                <div>
-                                    <h1 class="font-bold text-xl">P-Star 7</h1>
-                                    <p class="text-slate-600 my-1">Mahasiswa Boating School Ny.Puff</p>
-                                </div>
-                            </div>
-                            <div class="flex justify-start items-center gap-3 mt-2">
-                                <img src="img/testimoni-left-row.png" alt="" >
-                                <img src="img/testimoni-right-row.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="lg:flex justify-center items-center gap-20 hidden">
+              <div
+                class="text-slate-400 flex justify-center items-center gap-8 font-normal"
+              >
+                <a href="">Home</a>
+                <a href="">Fitur-Fitur</a>
+                <a href="">Harga</a>
+                <a href="">Testimoni</a>
+              </div>
+              <button
+                class="bg-primary py-2 px-5 shadow-lg rounded font-bold text-white flex justify-center items-center m-2 gap-3"
+              >
+                <p>Download</p>
+                <img src="img/right-arrow.png" alt="" />
+              </button>
             </div>
-
-            <div class="mt-10 mx-auto w-full md:flex justify-center items-center md:mt-14">
-                <div class="relative">
-                    <img src="img/rectangle-left.png" alt="" class="absolute left-0 bottom-32 scale-125 z-30 hidden md:block">
-                    <img src="img/circle-biru-left.png" alt="" class="absolute left-0 top-5 scale-125 z-30 hidden md:block">
-                    <img src="img/triangle-right.png" alt="" class="absolute right-10 top-16 z-30 hidden md:block scale-125">
-                    <img src="img/right-main-header.png" alt="" class="relative top-0 right-0 z-20">
-                    <img src="img/right-main-header-behind.png" alt="" class="absolute top-0 left-0 z-10 scale-x-110">
-                </div>
+            <div class="lg:hidden">
+              <img
+                src="img/navbar-icon-mobile.png"
+                alt=""
+                class="scale-75 btnNav open"
+              />
             </div>
+          </div>
+          <div
+            class="text-slate-400 flex-col justify-start items-center text-lg mt-5 gap-8 font-normal menuNav hidden"
+          >
+            <a
+              href="#"
+              class="transition px-6 py-2 hover:font-medium hover:bg-primary hover:text-white w-full"
+              >Home</a
+            >
+            <a
+              href="#"
+              class="transition px-6 py-2 hover:font-medium hover:bg-primary hover:text-white w-full mx-auto"
+              >Fitur-Fitur</a
+            >
+            <a
+              href="#"
+              class="transition px-6 py-2 hover:font-medium hover:bg-primary hover:text-white w-full mx-auto"
+              >Harga</a
+            >
+            <a
+              href="#"
+              class="transition px-6 py-2 hover:font-medium hover:bg-primary hover:text-white w-full mx-auto"
+              >Testimoni</a
+            >
+            <button
+              class="bg-primary py-2 px-5 shadow-lg rounded font-bold text-white flex justify-center items-center m-2 gap-3"
+            >
+              <p>Download</p>
+              <img src="img/right-arrow.png" alt="" />
+            </button>
+          </div>
         </div>
+      </nav>
+
+      <div class="wrapper-maxw">
+        <div
+          class="px-7 py-2 pb-10 md:px-10 md:py-16 lg:flex justify-center gap-20 items-center md:pt-10 lg:pt-0"
+        >
+          <div class="">
+            <h1
+              class="font-bold font-patua text-[40px] leading-[50px] lg:leading-normal md:w-[80%] md:text-center md:mx-auto lg:w-full lg:text-start lg:text-5xl text-dark-text lg:mt-10"
+            >
+              Sebuah cara mudah mengatur jadwal kuliah kamu
+            </h1>
+            <p
+              class="text-slate-700 mt-3 md:mt-5 md:text-xl lg:w-full lg:text-start"
+            >
+              Datang kuliah terlambat karena ketiduran itu tidak masalah datang
+              kuliah karena lupa jadwal itu sangatlah tidak keren. Aplikasi ini
+              adalah sahabat kamu sekarang, brodie~
+            </p>
+            <div class="flex justify-start items-center gap-3 mt-5">
+              <button
+                class="bg-primary py-2 px-8 shadow-lg rounded font-normal text-white gap-3 md:text-lg lg:text-base"
+              >
+                Learn More
+              </button>
+              <button
+                class="bg-primary bg-opacity-20 py-2 px-8 shadow-lg rounded font-normal text-orange-700 gap-3 md:text-lg lg:text-base"
+              >
+                Play Demo
+              </button>
+            </div>
+            <div
+              class="p-10 bg-white mt-8 rounded-lg shadow-xl relative z-10 lg:w-[80%]"
+            >
+              <!-- <div class="h-[90%] w-[60%] shadow-2xl bg-black absolute -right-40 top-1/2 -translate-y-1/2 -z-10"></div>
+                      <div class="h-[90%] w-[60%] shadow-2xl bg-black absolute right-0 top-1/2 -translate-y-1/2 -z-10"></div> -->
+              <div class="z-20">
+                <img src="img/star-testimoni.png" alt="" />
+                <p class="text-slate-600 my-5">
+                  “Aplikasi sialan, ini gw jadi kagak bisa alesan lagi buat
+                  bolos kelas Pak Sanusi yang galak itu! Tapi aku sekarang jadi
+                  rajin kuliah, terima kasih garena!”
+                </p>
+                <div class="md:flex justify-between items-center">
+                  <div class="flex justify-center gap-5 items-center">
+                    <img src="img/testimoni-client-1.png" alt="" />
+                    <div>
+                      <h1 class="font-bold text-xl">P-Star 7</h1>
+                      <p class="text-slate-600 my-1">
+                        Mahasiswa Boating School Ny.Puff
+                      </p>
+                    </div>
+                  </div>
+                  <div class="flex justify-start items-center gap-3 mt-2">
+                    <img src="img/testimoni-left-row.png" alt="" />
+                    <img src="img/testimoni-right-row.png" alt="" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="mt-10 mx-auto w-full md:flex justify-center items-center md:mt-14"
+          >
+            <div class="relative">
+              <img
+                src="img/rectangle-left.png"
+                alt=""
+                class="absolute left-0 bottom-32 scale-125 z-30 hidden md:block"
+              />
+              <img
+                src="img/circle-biru-left.png"
+                alt=""
+                class="absolute left-0 top-5 scale-125 z-30 hidden md:block"
+              />
+              <img
+                src="img/triangle-right.png"
+                alt=""
+                class="absolute right-10 top-16 z-30 hidden md:block scale-125"
+              />
+              <img
+                src="img/right-main-header.png"
+                alt=""
+                class="relative top-0 right-0 z-20"
+              />
+              <img
+                src="img/right-main-header-behind.png"
+                alt=""
+                class="absolute top-0 left-0 z-10 scale-x-110"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
- 
-    <section class="pt-10 px-10 pb-5 lg:px-32 lg:flex justify-center items-center gap-5">
+
+    <div class="wrapper-maxw">
+      <section
+        class="pt-10 px-10 pb-5 lg:px-32 lg:flex justify-center items-center gap-5"
+      >
         <div class="lg:w-[60%]">
-            <h1 class="font-bold font-patua text-[30px] leading-[50px] lg:leading-normal md:w-[80%] md:text-center lg:w-[80%] md:mx-auto lg:mx-0 lg:text-start lg:text-4xl text-dark-text">Kenapa Kamu Sangat Harus Pakai Aplikasi Yang Keren Ini?</h1>
-            <div class="md:flex justify-center items-start gap-5 lg:block">
-                <p class="text-slate-700 mt-3 md:mt-5 md:text-xl lg:w-[80%] lg:text-start md:w-[60%] lg:text-base">Sejujurnya aplikasi kita ini seringkali bermasalah. Kadang-kadang gak bisa submit data, kadang dibukanya lambat, kadang tiba-tiba logout sendiri, untung gak berdua.</p>
-                <div class="flex justify-start items-center gap-5 mt-5 lg:mt-14 lg:gap-20">
-                    <div>
-                        <p class="text-slate-600 font-bold lg:text-lg">Total Download</p>
-                        <h1 class="font-bold text-lg">1,501,234</h1>
-                    </div>
-                    <div>
-                        <p class="text-slate-600 font-bold lg:text-lg">Total User</p>
-                        <h1 class="font-bold text-lg">1,501,234</h1>
-                    </div>
-                </div>
+          <h1
+            class="font-bold font-patua text-[30px] leading-[50px] lg:leading-normal md:w-[80%] md:text-center lg:w-[80%] md:mx-auto lg:mx-0 lg:text-start lg:text-4xl text-dark-text"
+          >
+            Kenapa Kamu Sangat Harus Pakai Aplikasi Yang Keren Ini?
+          </h1>
+          <div class="md:flex justify-center items-start gap-5 lg:block">
+            <p
+              class="text-slate-700 mt-3 md:mt-5 md:text-xl lg:w-[80%] lg:text-start md:w-[60%] lg:text-base"
+            >
+              Sejujurnya aplikasi kita ini seringkali bermasalah. Kadang-kadang
+              gak bisa submit data, kadang dibukanya lambat, kadang tiba-tiba
+              logout sendiri, untung gak berdua.
+            </p>
+            <div
+              class="flex justify-start items-center gap-5 mt-5 lg:mt-14 lg:gap-20"
+            >
+              <div>
+                <p class="text-slate-600 font-bold lg:text-lg">
+                  Total Download
+                </p>
+                <h1 class="font-bold text-lg">1,501,234</h1>
+              </div>
+              <div>
+                <p class="text-slate-600 font-bold lg:text-lg">Total User</p>
+                <h1 class="font-bold text-lg">1,501,234</h1>
+              </div>
             </div>
+          </div>
         </div>
-        <div class="mt-5 md:mt-8 md:flex flex-wrap items-center md:items-stretch gap-5 lg:gap-10 lg:w-[70%]">
-            <div class="bg-primary bg-opacity-5 p-7 mb-10 lg:mb-0 md:w-[45%]">
-                <div class="flex justify-start items-center gap-3">
-                    <img src="img/database-icon.png" alt="" class="p-3 bg-primary bg-opacity-30 rounded">
-                    <p class="font-bold text-base">Aplikasi Gratis</p>
-                </div>
-                <p class="font-normal text-slate-600 mt-4 text-sm leading-relaxed">Semua fitur di aplikasi ini adalah gratis, tapi data privasi kamu akan kami jual ke agen khusus US.</p>
+        <div
+          class="mt-5 md:mt-8 md:flex flex-wrap items-center md:items-stretch gap-5 lg:gap-10 lg:w-[70%]"
+        >
+          <div class="bg-primary bg-opacity-5 p-7 mb-10 lg:mb-0 md:w-[45%]">
+            <div class="flex justify-start items-center gap-3">
+              <img
+                src="img/database-icon.png"
+                alt=""
+                class="p-3 bg-primary bg-opacity-30 rounded"
+              />
+              <p class="font-bold text-base">Aplikasi Gratis</p>
             </div>
-            <div class="bg-primary bg-opacity-5 p-7 mb-10 lg:mb-0 md:w-[45%]">
-                <div class="flex justify-start items-center gap-3">
-                    <img src="img/wifi-icon.png" alt="" class="p-3 bg-primary bg-opacity-30 rounded">
-                    <p class="font-bold text-base">Kode Otp Error</p>
-                </div>
-                <p class="font-normal text-slate-600 mt-4 text-sm leading-relaxed">Pas login kode OTP lo gak kekirim kadang, terus lo harus nyoba berulang kali sampe bisa.</p>
+            <p class="font-normal text-slate-600 mt-4 text-sm leading-relaxed">
+              Semua fitur di aplikasi ini adalah gratis, tapi data privasi kamu
+              akan kami jual ke agen khusus US.
+            </p>
+          </div>
+          <div class="bg-primary bg-opacity-5 p-7 mb-10 lg:mb-0 md:w-[45%]">
+            <div class="flex justify-start items-center gap-3">
+              <img
+                src="img/wifi-icon.png"
+                alt=""
+                class="p-3 bg-primary bg-opacity-30 rounded"
+              />
+              <p class="font-bold text-base">Kode Otp Error</p>
             </div>
-            <div class="bg-primary bg-opacity-5 p-7 mb-10 lg:mb-0 md:w-[45%]">
-                <div class="flex justify-start items-center gap-3">
-                    <img src="img/data-icon.png" alt="" class="p-3 bg-primary bg-opacity-30 rounded">
-                    <p class="font-bold text-base">Data Tidak Aman</p>
-                </div>
-                <p class="font-normal text-slate-600 mt-4 text-sm leading-relaxed">Data tidak disimpan dengan baik dan rentan bocor, jangan heran data lo tiba-tiba ada di deepweb.</p>
+            <p class="font-normal text-slate-600 mt-4 text-sm leading-relaxed">
+              Pas login kode OTP lo gak kekirim kadang, terus lo harus nyoba
+              berulang kali sampe bisa.
+            </p>
+          </div>
+          <div class="bg-primary bg-opacity-5 p-7 mb-10 lg:mb-0 md:w-[45%]">
+            <div class="flex justify-start items-center gap-3">
+              <img
+                src="img/data-icon.png"
+                alt=""
+                class="p-3 bg-primary bg-opacity-30 rounded"
+              />
+              <p class="font-bold text-base">Data Tidak Aman</p>
             </div>
-            <div class="bg-primary bg-opacity-5 p-7 mb-10 lg:mb-0 md:w-[45%]">
-                <div class="flex justify-start items-center gap-3">
-                    <img src="img/code-icon.png" alt="" class="p-3 bg-primary bg-opacity-30 rounded">
-                    <p class="font-bold text-base">Biasanya Error</p>
-                </div>
-                <p class="font-normal text-slate-600 mt-4">Ketika submit data biasanya error di bagian ajax-nya, eh nggak deng itu aplikasi pemerintah~</p>
+            <p class="font-normal text-slate-600 mt-4 text-sm leading-relaxed">
+              Data tidak disimpan dengan baik dan rentan bocor, jangan heran
+              data lo tiba-tiba ada di deepweb.
+            </p>
+          </div>
+          <div class="bg-primary bg-opacity-5 p-7 mb-10 lg:mb-0 md:w-[45%]">
+            <div class="flex justify-start items-center gap-3">
+              <img
+                src="img/code-icon.png"
+                alt=""
+                class="p-3 bg-primary bg-opacity-30 rounded"
+              />
+              <p class="font-bold text-base">Biasanya Error</p>
             </div>
+            <p class="font-normal text-slate-600 mt-4">
+              Ketika submit data biasanya error di bagian ajax-nya, eh nggak
+              deng itu aplikasi pemerintah~
+            </p>
+          </div>
         </div>
-    </section>
+      </section>
 
-    <section class="px-10 pb-10 lg:pt-20 lg:px-32 md:flex flex-col-reverse justify-start items-start gap-10 lg:flex-row lg:justify-between lg:items-center lg:gap-32 ">
+      <section
+        class="px-10 pb-10 lg:pt-20 lg:px-32 md:flex flex-col-reverse justify-start items-start gap-10 lg:flex-row lg:justify-between lg:items-center lg:gap-32"
+      >
         <div class="lg:w-[40%] md:mx-auto">
-            <div class="rounded-lg" style="
-                background: rgb(255,244,242);
-                background: linear-gradient(90deg, #FFBFB5 30%, #FF735C 52%);   
-            ">
-                <img src="img/fitur-left.png" alt="" class="z-20 pt-10">
-                <!-- <img src="img/fitur-left-behind.png" alt="" class="absolute top-10 left-0 z-10 scale-125"> -->
-            </div>
+          <div
+            class="rounded-lg"
+            style="
+              background: rgb(255, 244, 242);
+              background: linear-gradient(90deg, #ffbfb5 30%, #ff735c 52%);
+            "
+          >
+            <img src="img/fitur-left.png" alt="" class="z-20 pt-10" />
+            <!-- <img src="img/fitur-left-behind.png" alt="" class="absolute top-10 left-0 z-10 scale-125"> -->
+          </div>
         </div>
         <div class="mt-5 lg:w-[60%]">
-            <h1 class="font-bold font-patua text-[30px] leading-[45px] lg:leading-normal md:w-[80%] md:text-center lg:w-[80%] md:mx-auto lg:mx-0 lg:text-start lg:text-4xl text-dark-text">Memangnya ada fitur apa aja sih di aplikasi yang katanya keren ini? Jadi penasaran nich~</h1>
-            <p class="text-slate-600 mt-3 md:mt-5 md:text-xl lg:w-[80%] lg:text-start lg:text-base md:mx-5 lg:mx-0">Aplikasi sekeren ini akan membuat kamu tidak dapat memberi alasan apapun untuk bolos matkul dosen (HAHA MAMPUS!). Lagian lo kuliah tapi jarang masuk, titip absen doang!</p>
-            <div class="mt-5 md:grid grid-cols-2 gap-5 md:px-5 lg:px-0 lg:gap-3 lg:mt-10">
-                <div class="mb-5">
-                    <img src="img/cloud-off.png" alt="">
-                    <h1 class="text-lg font-bold py-2">Tidak Tersimpan Otomatis</h1>
-                    <p class="text-slate-500 md:w-[80%]">Kalo lo pelupa ya udah dah, jadwal lo bakal gak kesimpen tuh.</p>
-                </div>
-                <div class="mb-5">
-                    <img src="img/video.png" alt="">
-                    <h1 class="text-lg font-bold py-2">Si Rizal Nggak Pernah Ngonten</h1>
-                    <p class="text-slate-500 md:w-[80%]">Emang sih dia gak pernah ngonten, do’ain ya biar mau ngonten.</p>
-                </div>
-                <div class="mb-5">
-                    <img src="img/trash-2.png" alt="">
-                    <h1 class="text-lg font-bold py-2">Terhapus Otomatis</h1>
-                    <p class="text-slate-500 md:w-[80%]">Data lo bakal kehapus otomatis tiap hari, biar hemat server kita.</p>
-                </div>
-                <div class="mb-5">
-                    <img src="img/cloud-off.png" alt="">
-                    <h1 class="text-lg font-bold py-2">Nggak Tau Lagi Gw</h1>
-                    <p class="text-slate-500 md:w-[80%]">Mikir teks buat konten susah bro, ini aja ngasal masih susah!</p>
-                </div>
+          <h1
+            class="font-bold font-patua text-[30px] leading-[45px] lg:leading-normal md:w-[80%] md:text-center lg:w-[80%] md:mx-auto lg:mx-0 lg:text-start lg:text-4xl text-dark-text"
+          >
+            Memangnya ada fitur apa aja sih di aplikasi yang katanya keren ini?
+            Jadi penasaran nich~
+          </h1>
+          <p
+            class="text-slate-600 mt-3 md:mt-5 md:text-xl lg:w-[80%] lg:text-start lg:text-base md:mx-5 lg:mx-0"
+          >
+            Aplikasi sekeren ini akan membuat kamu tidak dapat memberi alasan
+            apapun untuk bolos matkul dosen (HAHA MAMPUS!). Lagian lo kuliah
+            tapi jarang masuk, titip absen doang!
+          </p>
+          <div
+            class="mt-5 md:grid grid-cols-2 gap-5 md:px-5 lg:px-0 lg:gap-3 lg:mt-10"
+          >
+            <div class="mb-5">
+              <img src="img/cloud-off.png" alt="" />
+              <h1 class="text-lg font-bold py-2">Tidak Tersimpan Otomatis</h1>
+              <p class="text-slate-500 md:w-[80%]">
+                Kalo lo pelupa ya udah dah, jadwal lo bakal gak kesimpen tuh.
+              </p>
             </div>
+            <div class="mb-5">
+              <img src="img/video.png" alt="" />
+              <h1 class="text-lg font-bold py-2">
+                Si Rizal Nggak Pernah Ngonten
+              </h1>
+              <p class="text-slate-500 md:w-[80%]">
+                Emang sih dia gak pernah ngonten, do’ain ya biar mau ngonten.
+              </p>
+            </div>
+            <div class="mb-5">
+              <img src="img/trash-2.png" alt="" />
+              <h1 class="text-lg font-bold py-2">Terhapus Otomatis</h1>
+              <p class="text-slate-500 md:w-[80%]">
+                Data lo bakal kehapus otomatis tiap hari, biar hemat server
+                kita.
+              </p>
+            </div>
+            <div class="mb-5">
+              <img src="img/cloud-off.png" alt="" />
+              <h1 class="text-lg font-bold py-2">Nggak Tau Lagi Gw</h1>
+              <p class="text-slate-500 md:w-[80%]">
+                Mikir teks buat konten susah bro, ini aja ngasal masih susah!
+              </p>
+            </div>
+          </div>
         </div>
-    </section>
-
-    <section class="px-6 py-10 lg:px-32 " style="
-        background: rgb(255,244,242);
-        background: linear-gradient(90deg, rgba(255,244,242,1) 30%, rgba(255,240,238,1) 52%);
-    ">
-    <div class="px-5 py-10">
-        <h1 class="font-bold font-patua text-[30px] leading-[50px] lg:leading-normal md:w-[50%] md:text-center lg:w-[50%] md:mx-auto lg:mx-auto lg:text-center lg:text-4xl text-dark-text text-center">Main catur sambil bersepeda, beda harga beda fitur</h1>
-        <p class="text-slate-700 mt-3 md:mt-5 md:text-xl lg:w-[50%] lg:text-center md:w-[80%] mx-auto lg:mx-auto md:text-center lg:text-base">Aplikasi ini gratis sebenernya, brodie. Tapi kalo mau bayar gapapa juga sih, untuk gantinya kami kasih fitur yang spesial buat kamu!</p>
+      </section>
     </div>
 
-        <div class="mt-5 md:flex flex-wrap justify-center items-stretch gap-6 lg:items-start">
-            <div class="bg-white p-9 rounded-sm mb-5 md:w-[45%] lg:w-[30%]">
-                <p class="text-orange-500 text-sm font-bold">RINDURATU</p>
-                <h1 class="text-3xl mt-5 my-2 font-bold font-patua">Free</h1>
-                <p class="text-slate-500">Akses ke semua fitur gratis tapi data lo dijual ke agen khusus US.</p>
-                <div class="flex flex-col justify-start items-start gap-3 mt-5">
-                    <div class="flex items-center justify-center gap-5">
-                        <img src="img/checklist.png" alt="">
-                        <p>Jadwal Tak Terbatas</p>
-                    </div>
-                    <div class="flex items-center justify-center gap-5">
-                        <img src="img/checklist.png" alt="">
-                        <p>Fitur Notifikasi (Kadang Telat)</p>
-                    </div>
-                    <div class="flex items-center justify-center gap-5">
-                        <img src="img/checklist.png" alt="">
-                        <p>Mode Gelap</p>
-                    </div>
-                    <div class="flex items-center justify-center gap-5">
-                        <img src="img/checklist.png" alt="">
-                        <p>Bisa Topup Pulsa</p>
-                    </div>
-                    <div class="flex items-center justify-center gap-5">
-                        <img src="img/checklist.png" alt="">
-                        <p>Bisa Beli Token Listrik</p>
-                    </div>
-                    <div class="flex items-center justify-center gap-5">
-                        <img src="img/checklist.png" alt="">
-                        <p>Data Lo Dijual</p>
-                    </div>
-                </div>
-
-                <button class="w-full py-3 mt-10 shadow-xl shadow-orange-100 rounded-md font-medium bg-primary text-white">
-                    Download
-                </button>
-            </div>
-            <div class="bg-white p-9 rounded-sm mb-5 md:w-[45%] lg:w-[30%]">
-                <p class="text-orange-500 text-sm font-bold">SULTAN</p>
-                <h1 class="text-3xl mt-5 my-2 font-bold font-patua">Rp100K</h1>
-                <p class="text-slate-500">Sama aja data lo juga tetep dijual, tapi lo dapet fitur yang lain.</p>
-                <div class="flex flex-col justify-start items-start gap-3 mt-5">
-                    <div class="flex items-center justify-center gap-5">
-                        <img src="img/checklist.png" alt="">
-                        <p>Semua Fitur Sebelumnya</p>
-                    </div>
-                    <div class="flex items-center justify-center gap-5">
-                        <img src="img/checklist.png" alt="">
-                        <p>Diingetin Makan</p>
-                    </div>
-                    <div class="flex items-center justify-center gap-5">
-                        <img src="img/checklist.png" alt="">
-                        <p>Sleepcall Sampe Bobo</p>
-                    </div>
-                    <div class="flex items-center justify-center gap-5">
-                        <img src="img/checklist.png" alt="">
-                        <p>Ditemenin Jalan Tiap Minggu</p>
-                    </div>
-                    <div class="flex items-center justify-center gap-5">
-                        <img src="img/checklist.png" alt="">
-                        <p>Ditemenin Nonton Eksekswan</p>
-                    </div>
-                    <div class="flex items-center justify-center gap-5">
-                        <img src="img/checklist.png" alt="">
-                        <p>Terhindar Razia Rambut</p>
-                    </div>
-                    <div class="flex items-center justify-center gap-5">
-                        <img src="img/checklist.png" alt="">
-                        <p>Dapet Izin Bikin Ormas</p>
-                    </div>
-                </div>
-
-                <button class="w-full py-3 mt-10 shadow-xl shadow-orange-100 rounded-md font-medium bg-primary text-white">
-                    Download
-                </button>
-            </div>
-            <div class="bg-white p-9 rounded-sm mb-5 md:w-[45%] lg:w-[30%]">
-                <p class="text-orange-500 text-sm font-bold">RAFATAR</p>
-                <h1 class="text-3xl mt-5 my-2 font-bold font-patua">Rp100000K</h1>
-                <p class="text-slate-500">Ini juga sama aja, data lo dijual juga. Tapi fitur-fiturnya lebih ok.</p>
-                <div class="flex flex-col justify-start items-start gap-3 mt-5">
-                    <div class="flex items-center justify-center gap-5">
-                        <img src="img/checklist.png" alt="">
-                        <p>Semua Fitur Sebelumnya</p>
-                    </div>
-                    <div class="flex items-center justify-center gap-5">
-                        <img src="img/checklist.png" alt="">
-                        <p>Dibayarin Kuliah 4 Semester</p>
-                    </div>
-                    <div class="flex items-center justify-center gap-5">
-                        <img src="img/checklist.png" alt="">
-                        <p>Dibayarin Cicilan Motor</p>
-                    </div>
-                    <div class="flex items-center justify-center gap-5">
-                        <img src="img/checklist.png" alt="">
-                        <p>Dicicilin KPR 12 Tahun</p>
-                    </div>
-                    <div class="flex items-center justify-center gap-5">
-                        <img src="img/checklist.png" alt="">
-                        <p>Magang di NASA Cab. Depok</p>
-                    </div>
-                    <div class="flex items-center justify-center gap-5">
-                        <img src="img/checklist.png" alt="">
-                        <p>Dapet Skin Alok</p>
-                    </div>
-                    <div class="flex items-center justify-center gap-5">
-                        <img src="img/checklist.png" alt="">
-                        <p>Naik Haji Bila Mampu</p>
-                    </div>
-                    <div class="flex items-center justify-center gap-5">
-                        <img src="img/checklist.png" alt="">
-                        <p>Ditemenin Nonton Eksekswan</p>
-                    </div>
-                </div>
-
-                <button class="w-full py-3 mt-10 shadow-xl shadow-orange-100 rounded-md font-medium bg-primary text-white">
-                    Download
-                </button>
-            </div>
+    <section
+      class="px-6 py-10 lg:px-32"
+      style="
+        background: rgb(255, 244, 242);
+        background: linear-gradient(
+          90deg,
+          rgba(255, 244, 242, 1) 30%,
+          rgba(255, 240, 238, 1) 52%
+        );
+      "
+    >
+      <div class="wrapper-maxw">
+        <div class="px-5 py-10">
+          <h1
+            class="font-bold font-patua text-[30px] leading-[50px] lg:leading-normal md:w-[50%] md:text-center lg:w-[50%] md:mx-auto lg:mx-auto lg:text-center lg:text-4xl text-dark-text text-center"
+          >
+            Main catur sambil bersepeda, beda harga beda fitur
+          </h1>
+          <p
+            class="text-slate-700 mt-3 md:mt-5 md:text-xl lg:w-[50%] lg:text-center md:w-[80%] mx-auto lg:mx-auto md:text-center lg:text-base"
+          >
+            Aplikasi ini gratis sebenernya, brodie. Tapi kalo mau bayar gapapa
+            juga sih, untuk gantinya kami kasih fitur yang spesial buat kamu!
+          </p>
         </div>
 
-        <h1 class="text-slate-500 text-center text-sm my-15 md:w-[60%] mx-auto md:my-10 lg:w-[40%]"><span class="font-bold">Harap Di Ingat:</span> Harga di atas belum termasuk KKM, dan harga sewaktu-waktu bisa berubah secara mendadak seperti pengumuman PPKM darurat.</h1>
+        <div
+          class="mt-5 md:flex flex-wrap justify-center items-stretch gap-6 lg:items-start"
+        >
+          <div class="bg-white p-9 rounded-sm mb-5 md:w-[45%] lg:w-[30%]">
+            <p class="text-orange-500 text-sm font-bold">RINDURATU</p>
+            <h1 class="text-3xl mt-5 my-2 font-bold font-patua">Free</h1>
+            <p class="text-slate-500">
+              Akses ke semua fitur gratis tapi data lo dijual ke agen khusus US.
+            </p>
+            <div class="flex flex-col justify-start items-start gap-3 mt-5">
+              <div class="flex items-center justify-center gap-5">
+                <img src="img/checklist.png" alt="" />
+                <p>Jadwal Tak Terbatas</p>
+              </div>
+              <div class="flex items-center justify-center gap-5">
+                <img src="img/checklist.png" alt="" />
+                <p>Fitur Notifikasi (Kadang Telat)</p>
+              </div>
+              <div class="flex items-center justify-center gap-5">
+                <img src="img/checklist.png" alt="" />
+                <p>Mode Gelap</p>
+              </div>
+              <div class="flex items-center justify-center gap-5">
+                <img src="img/checklist.png" alt="" />
+                <p>Bisa Topup Pulsa</p>
+              </div>
+              <div class="flex items-center justify-center gap-5">
+                <img src="img/checklist.png" alt="" />
+                <p>Bisa Beli Token Listrik</p>
+              </div>
+              <div class="flex items-center justify-center gap-5">
+                <img src="img/checklist.png" alt="" />
+                <p>Data Lo Dijual</p>
+              </div>
+            </div>
+
+            <button
+              class="w-full py-3 mt-10 shadow-xl shadow-orange-100 rounded-md font-medium bg-primary text-white"
+            >
+              Download
+            </button>
+          </div>
+          <div class="bg-white p-9 rounded-sm mb-5 md:w-[45%] lg:w-[30%]">
+            <p class="text-orange-500 text-sm font-bold">SULTAN</p>
+            <h1 class="text-3xl mt-5 my-2 font-bold font-patua">Rp100K</h1>
+            <p class="text-slate-500">
+              Sama aja data lo juga tetep dijual, tapi lo dapet fitur yang lain.
+            </p>
+            <div class="flex flex-col justify-start items-start gap-3 mt-5">
+              <div class="flex items-center justify-center gap-5">
+                <img src="img/checklist.png" alt="" />
+                <p>Semua Fitur Sebelumnya</p>
+              </div>
+              <div class="flex items-center justify-center gap-5">
+                <img src="img/checklist.png" alt="" />
+                <p>Diingetin Makan</p>
+              </div>
+              <div class="flex items-center justify-center gap-5">
+                <img src="img/checklist.png" alt="" />
+                <p>Sleepcall Sampe Bobo</p>
+              </div>
+              <div class="flex items-center justify-center gap-5">
+                <img src="img/checklist.png" alt="" />
+                <p>Ditemenin Jalan Tiap Minggu</p>
+              </div>
+              <div class="flex items-center justify-center gap-5">
+                <img src="img/checklist.png" alt="" />
+                <p>Ditemenin Nonton Eksekswan</p>
+              </div>
+              <div class="flex items-center justify-center gap-5">
+                <img src="img/checklist.png" alt="" />
+                <p>Terhindar Razia Rambut</p>
+              </div>
+              <div class="flex items-center justify-center gap-5">
+                <img src="img/checklist.png" alt="" />
+                <p>Dapet Izin Bikin Ormas</p>
+              </div>
+            </div>
+
+            <button
+              class="w-full py-3 mt-10 shadow-xl shadow-orange-100 rounded-md font-medium bg-primary text-white"
+            >
+              Download
+            </button>
+          </div>
+          <div class="bg-white p-9 rounded-sm mb-5 md:w-[45%] lg:w-[30%]">
+            <p class="text-orange-500 text-sm font-bold">RAFATAR</p>
+            <h1 class="text-3xl mt-5 my-2 font-bold font-patua">Rp100000K</h1>
+            <p class="text-slate-500">
+              Ini juga sama aja, data lo dijual juga. Tapi fitur-fiturnya lebih
+              ok.
+            </p>
+            <div class="flex flex-col justify-start items-start gap-3 mt-5">
+              <div class="flex items-center justify-center gap-5">
+                <img src="img/checklist.png" alt="" />
+                <p>Semua Fitur Sebelumnya</p>
+              </div>
+              <div class="flex items-center justify-center gap-5">
+                <img src="img/checklist.png" alt="" />
+                <p>Dibayarin Kuliah 4 Semester</p>
+              </div>
+              <div class="flex items-center justify-center gap-5">
+                <img src="img/checklist.png" alt="" />
+                <p>Dibayarin Cicilan Motor</p>
+              </div>
+              <div class="flex items-center justify-center gap-5">
+                <img src="img/checklist.png" alt="" />
+                <p>Dicicilin KPR 12 Tahun</p>
+              </div>
+              <div class="flex items-center justify-center gap-5">
+                <img src="img/checklist.png" alt="" />
+                <p>Magang di NASA Cab. Depok</p>
+              </div>
+              <div class="flex items-center justify-center gap-5">
+                <img src="img/checklist.png" alt="" />
+                <p>Dapet Skin Alok</p>
+              </div>
+              <div class="flex items-center justify-center gap-5">
+                <img src="img/checklist.png" alt="" />
+                <p>Naik Haji Bila Mampu</p>
+              </div>
+              <div class="flex items-center justify-center gap-5">
+                <img src="img/checklist.png" alt="" />
+                <p>Ditemenin Nonton Eksekswan</p>
+              </div>
+            </div>
+
+            <button
+              class="w-full py-3 mt-10 shadow-xl shadow-orange-100 rounded-md font-medium bg-primary text-white"
+            >
+              Download
+            </button>
+          </div>
+        </div>
+
+        <h1
+          class="text-slate-500 text-center text-sm my-15 md:w-[60%] mx-auto md:my-10 lg:w-[40%]"
+        >
+          <span class="font-bold">Harap Di Ingat:</span> Harga di atas belum
+          termasuk KKM, dan harga sewaktu-waktu bisa berubah secara mendadak
+          seperti pengumuman PPKM darurat.
+        </h1>
+      </div>
     </section>
 
     <section class="pb-10 lg:px-32 bg-primary bg-opacity-20 px-5">
+      <div class="wrapper-maxw">
         <div class="px-5 py-10">
-            <h1 class="font-bold font-patua text-[30px] leading-[50px] lg:leading-normal md:w-[50%] md:text-center lg:w-[50%] md:mx-auto lg:mx-auto lg:text-center lg:text-4xl text-dark-text text-center">Apa kata umat manusia tentang aplikasi keren ini?</h1>
-            <p class="text-slate-700 mt-3 md:mt-5 md:text-xl lg:w-[50%] lg:text-center md:w-[80%] mx-auto lg:mx-auto md:text-center lg:text-base">Kami tidak memfilter semua review, males soalnya. Jadi semua yang ditampilkan di sini semuanya asli tanpa reksadana.</p>
+          <h1
+            class="font-bold font-patua text-[30px] leading-[50px] lg:leading-normal md:w-[50%] md:text-center lg:w-[50%] md:mx-auto lg:mx-auto lg:text-center lg:text-4xl text-dark-text text-center"
+          >
+            Apa kata umat manusia tentang aplikasi keren ini?
+          </h1>
+          <p
+            class="text-slate-700 mt-3 md:mt-5 md:text-xl lg:w-[50%] lg:text-center md:w-[80%] mx-auto lg:mx-auto md:text-center lg:text-base"
+          >
+            Kami tidak memfilter semua review, males soalnya. Jadi semua yang
+            ditampilkan di sini semuanya asli tanpa reksadana.
+          </p>
         </div>
-        <div class="md:grid grid-cols-2 gap-5 md:mx-10 lg:grid-cols-3 lg:gap-5 justify-items-center place-items-start">
-            <div class="p-10 mb-5 md:mb-0 bg-white rounded-lg shadow-xl relative z-10 lg:w-[100%]">
-                <!-- <div class="h-[90%] w-[60%] shadow-2xl bg-black absolute -right-40 top-1/2 -translate-y-1/2 -z-10"></div>
-                <div class="h-[90%] w-[60%] shadow-2xl bg-black absolute right-0 top-1/2 -translate-y-1/2 -z-10"></div> -->
-                <div class="z-20">
-                    <img src="img/star-testimoni.png" alt="">
-                    <p class="text-slate-600 my-5">“Terima kasih untuk aplikasinya, karena aplikasi ini murid-murid saya jadi rajin kuliah walaupun nggak ada adab. Adab tidak perlu kuliah nomor satu!”</p>
-                    <div class="md:flex justify-between items-center">
-                        <div class="flex justify-start gap-5 items-center">
-                            <img src="img/testimoni-client-2.png" alt="">
-                            <div>
-                                <h1 class="font-bold text-xl">Sanusi Sullivan</h1>
-                                <p class="text-slate-600 my-1">Dosen di Boating School Ny. Puff </p>
-                            </div>
-                        </div>
-                    </div>
+        <div
+          class="md:grid grid-cols-2 gap-5 md:mx-10 lg:grid-cols-3 lg:gap-5 justify-items-center place-items-start"
+        >
+          <div
+            class="p-10 mb-5 md:mb-0 bg-white rounded-lg shadow-xl relative z-10 lg:w-[100%]"
+          >
+            <!-- <div class="h-[90%] w-[60%] shadow-2xl bg-black absolute -right-40 top-1/2 -translate-y-1/2 -z-10"></div>
+                          <div class="h-[90%] w-[60%] shadow-2xl bg-black absolute right-0 top-1/2 -translate-y-1/2 -z-10"></div> -->
+            <div class="z-20">
+              <img src="img/star-testimoni.png" alt="" />
+              <p class="text-slate-600 my-5">
+                “Terima kasih untuk aplikasinya, karena aplikasi ini murid-murid
+                saya jadi rajin kuliah walaupun nggak ada adab. Adab tidak perlu
+                kuliah nomor satu!”
+              </p>
+              <div class="md:flex justify-between items-center">
+                <div class="flex justify-start gap-5 items-center">
+                  <img src="img/testimoni-client-2.png" alt="" />
+                  <div>
+                    <h1 class="font-bold text-xl">Sanusi Sullivan</h1>
+                    <p class="text-slate-600 my-1">
+                      Dosen di Boating School Ny. Puff
+                    </p>
+                  </div>
                 </div>
+              </div>
             </div>
-            <div class="p-10 mb-5 md:mb-0 bg-white rounded-lg shadow-xl relative z-10 lg:w-[100%]">
-                <!-- <div class="h-[90%] w-[60%] shadow-2xl bg-black absolute -right-40 top-1/2 -translate-y-1/2 -z-10"></div>
-                <div class="h-[90%] w-[60%] shadow-2xl bg-black absolute right-0 top-1/2 -translate-y-1/2 -z-10"></div> -->
-                <div class="z-20">
-                    <img src="img/star-testimoni.png" alt="">
-                    <p class="text-slate-600 my-5">“Aplikasi sialan, ini gw jadi kagak bisa alesan lagi buat bolos kelas Pak Sanusi yang galak itu! Tapi aku sekarang jadi rajin kuliah, terima kasih garena!”</p>
-                    <div class="md:flex justify-between items-center">
-                        <div class="flex justify-start gap-5 items-center">
-                            <img src="img/testimoni-client-3.png" alt="">
-                            <div>
-                                <h1 class="font-bold text-xl">Wahyu Yayuk</h1>
-                                <p class="text-slate-600 my-1">Mahasiswa Abadi</p>
-                            </div>
-                        </div>
-                    </div>
+          </div>
+          <div
+            class="p-10 mb-5 md:mb-0 bg-white rounded-lg shadow-xl relative z-10 lg:w-[100%]"
+          >
+            <!-- <div class="h-[90%] w-[60%] shadow-2xl bg-black absolute -right-40 top-1/2 -translate-y-1/2 -z-10"></div>
+                          <div class="h-[90%] w-[60%] shadow-2xl bg-black absolute right-0 top-1/2 -translate-y-1/2 -z-10"></div> -->
+            <div class="z-20">
+              <img src="img/star-testimoni.png" alt="" />
+              <p class="text-slate-600 my-5">
+                “Aplikasi sialan, ini gw jadi kagak bisa alesan lagi buat bolos
+                kelas Pak Sanusi yang galak itu! Tapi aku sekarang jadi rajin
+                kuliah, terima kasih garena!”
+              </p>
+              <div class="md:flex justify-between items-center">
+                <div class="flex justify-start gap-5 items-center">
+                  <img src="img/testimoni-client-3.png" alt="" />
+                  <div>
+                    <h1 class="font-bold text-xl">Wahyu Yayuk</h1>
+                    <p class="text-slate-600 my-1">Mahasiswa Abadi</p>
+                  </div>
                 </div>
+              </div>
             </div>
-            <div class="p-10 mb-5 md:mb-0 bg-white rounded-lg shadow-xl relative z-10 lg:w-[100%]">
-                <!-- <div class="h-[90%] w-[60%] shadow-2xl bg-black absolute -right-40 top-1/2 -translate-y-1/2 -z-10"></div>
-                <div class="h-[90%] w-[60%] shadow-2xl bg-black absolute right-0 top-1/2 -translate-y-1/2 -z-10"></div> -->
-                <div class="z-20">
-                    <img src="img/star-testimoni.png" alt="">
-                    <p class="text-slate-600 my-5">“Hanya di rezim ini ada aplikasi yang membuat anak saya menjadi rajin kuliah walaupun tidak menjadi pandai. Terima kasih Papa Zola!”</p>
-                    <div class="md:flex justify-between items-center">
-                        <div class="flex justify-start gap-5 items-center">
-                            <img src="img/testimoni-client-4.png" alt="">
-                            <div>
-                                <h1 class="font-bold text-xl">Ibu Scarlet Darkening</h1>
-                                <p class="text-slate-600 my-1">Ibunda Wahyu Yayuk</p>
-                            </div>
-                        </div>
-                    </div>
+          </div>
+          <div
+            class="p-10 mb-5 md:mb-0 bg-white rounded-lg shadow-xl relative z-10 lg:w-[100%]"
+          >
+            <!-- <div class="h-[90%] w-[60%] shadow-2xl bg-black absolute -right-40 top-1/2 -translate-y-1/2 -z-10"></div>
+                          <div class="h-[90%] w-[60%] shadow-2xl bg-black absolute right-0 top-1/2 -translate-y-1/2 -z-10"></div> -->
+            <div class="z-20">
+              <img src="img/star-testimoni.png" alt="" />
+              <p class="text-slate-600 my-5">
+                “Hanya di rezim ini ada aplikasi yang membuat anak saya menjadi
+                rajin kuliah walaupun tidak menjadi pandai. Terima kasih Papa
+                Zola!”
+              </p>
+              <div class="md:flex justify-between items-center">
+                <div class="flex justify-start gap-5 items-center">
+                  <img src="img/testimoni-client-4.png" alt="" />
+                  <div>
+                    <h1 class="font-bold text-xl">Ibu Scarlet Darkening</h1>
+                    <p class="text-slate-600 my-1">Ibunda Wahyu Yayuk</p>
+                  </div>
                 </div>
+              </div>
             </div>
-            <div class="p-10 mb-5 md:mb-0 bg-white rounded-lg shadow-xl relative z-10 lg:w-[100%]">
-                <!-- <div class="h-[90%] w-[60%] shadow-2xl bg-black absolute -right-40 top-1/2 -translate-y-1/2 -z-10"></div>
-                <div class="h-[90%] w-[60%] shadow-2xl bg-black absolute right-0 top-1/2 -translate-y-1/2 -z-10"></div> -->
-                <div class="z-20">
-                    <img src="img/star-testimoni.png" alt="">
-                    <p class="text-slate-600 my-5">“Aq kmrn koq instla di hp qu gx bs y? ap krn aq pke hp miTho? admin tLonk dnk bntU instlA d hp qu, aq mw pKe apkx”</p>
-                    <div class="md:flex justify-between items-center">
-                        <div class="flex justify-start gap-5 items-center">
-                            <img src="img/testimoni-client-5.png" alt="">
-                            <div>
-                                <h1 class="font-bold text-xl">Indah Cyank Dya Clmax</h1>
-                                <p class="text-slate-600 my-1">Works at Looking For True Love, Inc</p>
-                            </div>
-                        </div>
-                    </div>
+          </div>
+          <div
+            class="p-10 mb-5 md:mb-0 bg-white rounded-lg shadow-xl relative z-10 lg:w-[100%]"
+          >
+            <!-- <div class="h-[90%] w-[60%] shadow-2xl bg-black absolute -right-40 top-1/2 -translate-y-1/2 -z-10"></div>
+                          <div class="h-[90%] w-[60%] shadow-2xl bg-black absolute right-0 top-1/2 -translate-y-1/2 -z-10"></div> -->
+            <div class="z-20">
+              <img src="img/star-testimoni.png" alt="" />
+              <p class="text-slate-600 my-5">
+                “Aq kmrn koq instla di hp qu gx bs y? ap krn aq pke hp miTho?
+                admin tLonk dnk bntU instlA d hp qu, aq mw pKe apkx”
+              </p>
+              <div class="md:flex justify-between items-center">
+                <div class="flex justify-start gap-5 items-center">
+                  <img src="img/testimoni-client-5.png" alt="" />
+                  <div>
+                    <h1 class="font-bold text-xl">Indah Cyank Dya Clmax</h1>
+                    <p class="text-slate-600 my-1">
+                      Works at Looking For True Love, Inc
+                    </p>
+                  </div>
                 </div>
+              </div>
             </div>
-            <div class="p-10 mb-5 md:mb-0 bg-white rounded-lg shadow-xl relative z-10 lg:w-[100%]">
-                <!-- <div class="h-[90%] w-[60%] shadow-2xl bg-black absolute -right-40 top-1/2 -translate-y-1/2 -z-10"></div>
-                <div class="h-[90%] w-[60%] shadow-2xl bg-black absolute right-0 top-1/2 -translate-y-1/2 -z-10"></div> -->
-                <div class="z-20">
-                    <img src="img/star-testimoni.png" alt="">
-                    <p class="text-slate-600 my-5">“Pengiriman cepat,,, seller ramah,, packing juga rapih, tapi barangnya belom dicoba... saya kasih bintang satu dulu,,,, nanti kalo udah dicoba saya kasih bintang dua,,, nanti kalo udah peterpen jadi bintang di surga... xixixixi...”</p>
-                    <div class="md:flex justify-between items-center">
-                        <div class="flex justify-start gap-5 items-center">
-                            <img src="img/testimoni-client-6.png" alt="">
-                            <div>
-                                <h1 class="font-bold text-xl">Jumadi RT. 03</h1>
-                                <p class="text-slate-600 my-1">Ketua RT 06</p>
-                            </div>
-                        </div>
-                    </div>
+          </div>
+          <div
+            class="p-10 mb-5 md:mb-0 bg-white rounded-lg shadow-xl relative z-10 lg:w-[100%]"
+          >
+            <!-- <div class="h-[90%] w-[60%] shadow-2xl bg-black absolute -right-40 top-1/2 -translate-y-1/2 -z-10"></div>
+                          <div class="h-[90%] w-[60%] shadow-2xl bg-black absolute right-0 top-1/2 -translate-y-1/2 -z-10"></div> -->
+            <div class="z-20">
+              <img src="img/star-testimoni.png" alt="" />
+              <p class="text-slate-600 my-5">
+                “Pengiriman cepat,,, seller ramah,, packing juga rapih, tapi
+                barangnya belom dicoba... saya kasih bintang satu dulu,,,, nanti
+                kalo udah dicoba saya kasih bintang dua,,, nanti kalo udah
+                peterpen jadi bintang di surga... xixixixi...”
+              </p>
+              <div class="md:flex justify-between items-center">
+                <div class="flex justify-start gap-5 items-center">
+                  <img src="img/testimoni-client-6.png" alt="" />
+                  <div>
+                    <h1 class="font-bold text-xl">Jumadi RT. 03</h1>
+                    <p class="text-slate-600 my-1">Ketua RT 06</p>
+                  </div>
                 </div>
+              </div>
             </div>
-            <div class="p-10 mb-5 md:mb-0 bg-white rounded-lg shadow-xl relative z-10 lg:w-[100%]">
-                <!-- <div class="h-[90%] w-[60%] shadow-2xl bg-black absolute -right-40 top-1/2 -translate-y-1/2 -z-10"></div>
-                <div class="h-[90%] w-[60%] shadow-2xl bg-black absolute right-0 top-1/2 -translate-y-1/2 -z-10"></div> -->
-                <div class="z-20">
-                    <img src="img/star-testimoni.png" alt="">
-                    <p class="text-slate-600 my-5">“aplikasinya keren! mjb, nder.... aku numpang lapak yaaa ... Jual Netflix Spotify disney plus Youtube prem Iqiyi Grammarly Viu Canva Wetv Vidio Mola tv picsart Tezza Unfold Aligh motion Vsco Lightroom get contact apple music amazon prime resso iflix Microsoft 365 HBO GO zoom.”</p>
-                    <div class="md:flex justify-between items-center">
-                        <div class="flex justify-start gap-5 items-center">
-                            <img src="img/testimoni-client-7.png" alt="">
-                            <div>
-                                <h1 class="font-bold text-xl">Cucunya Megalodon</h1>
-                                <p class="text-slate-600 my-1">Pecinta Kucing Hungaria</p>
-                            </div>
-                        </div>
-                    </div>
+          </div>
+          <div
+            class="p-10 mb-5 md:mb-0 bg-white rounded-lg shadow-xl relative z-10 lg:w-[100%]"
+          >
+            <!-- <div class="h-[90%] w-[60%] shadow-2xl bg-black absolute -right-40 top-1/2 -translate-y-1/2 -z-10"></div>
+                          <div class="h-[90%] w-[60%] shadow-2xl bg-black absolute right-0 top-1/2 -translate-y-1/2 -z-10"></div> -->
+            <div class="z-20">
+              <img src="img/star-testimoni.png" alt="" />
+              <p class="text-slate-600 my-5">
+                “aplikasinya keren! mjb, nder.... aku numpang lapak yaaa ...
+                Jual Netflix Spotify disney plus Youtube prem Iqiyi Grammarly
+                Viu Canva Wetv Vidio Mola tv picsart Tezza Unfold Aligh motion
+                Vsco Lightroom get contact apple music amazon prime resso iflix
+                Microsoft 365 HBO GO zoom.”
+              </p>
+              <div class="md:flex justify-between items-center">
+                <div class="flex justify-start gap-5 items-center">
+                  <img src="img/testimoni-client-7.png" alt="" />
+                  <div>
+                    <h1 class="font-bold text-xl">Cucunya Megalodon</h1>
+                    <p class="text-slate-600 my-1">Pecinta Kucing Hungaria</p>
+                  </div>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </section>
 
-    <section class="px-8 pb-20 lg:pt-10">
+    <div class="wrapper-maxw">
+      <section class="px-8 pb-20 lg:pt-10">
         <div class="px-5 py-10">
-            <h1 class="font-bold font-patua text-[30px] leading-[50px] lg:leading-normal md:w-[50%] md:text-center lg:w-[50%] md:mx-auto lg:mx-auto lg:text-center lg:text-4xl text-dark-text text-center">Download Aplikasi Keren Ini Sekarang</h1>
-            <p class="text-slate-700 mt-3 md:mt-5 md:text-xl lg:w-[50%] lg:text-center md:w-[80%] mx-auto lg:mx-auto md:text-center lg:text-base">Please download lah aplikasi ini, udah susah-susah buat, mana pas bikin sampe begadang, terus juga ditambah weekend. Jadi, please download lah ya.</p>
+          <h1
+            class="font-bold font-patua text-[30px] leading-[50px] lg:leading-normal md:w-[50%] md:text-center lg:w-[50%] md:mx-auto lg:mx-auto lg:text-center lg:text-4xl text-dark-text text-center"
+          >
+            Download Aplikasi Keren Ini Sekarang
+          </h1>
+          <p
+            class="text-slate-700 mt-3 md:mt-5 md:text-xl lg:w-[50%] lg:text-center md:w-[80%] mx-auto lg:mx-auto md:text-center lg:text-base"
+          >
+            Please download lah aplikasi ini, udah susah-susah buat, mana pas
+            bikin sampe begadang, terus juga ditambah weekend. Jadi, please
+            download lah ya.
+          </p>
         </div>
         <div class="flex justify-center gap-3 items-center">
-            <img src="img/appstore.png" alt="">
-            <img src="img/googleplay.png" alt="">
+          <img src="img/appstore.png" alt="" />
+          <img src="img/googleplay.png" alt="" />
         </div>
-    </section>
+      </section>
 
-    <section class="text-white md:flex items-start justify-around mx-10 mb-20 gap-10 lg:mt-10">
+      <section
+        class="text-white md:flex items-start justify-around mx-10 mb-20 gap-10 lg:mt-10"
+      >
         <div class="text-slate-500 md:w-[80%] lg:w-[30%]">
-            <div class="flex justify-start items-center gap-3 mb-5">
-                <img src="img/brand.png" class="" alt="">
-                <h1 class="font-bold text-2xl text-slate-900">Zeitplan</h1>
-            </div>
-            <p class="mb-5">Sebuah aplikasi yang membantu kamu untuk membuat jadwal kuliah, jadwal mabar, jadwal makan, jadwal liga inggris, dan jadwal-jadwal lainnya. Walaupun banyak error, setidaknya kami sudah berusaha semaksimal mungkin.</p>
-            <p class="mb-2">Design By Muhammad Nauval Azhar</p>
-            <p class="mb-2">Code By Azam Din Abdillah</p>
-            <!-- <p>Design By Collosal LLC</p> -->
+          <div class="flex justify-start items-center gap-3 mb-5">
+            <img src="img/brand.png" class="" alt="" />
+            <h1 class="font-bold text-2xl text-slate-900">Zeitplan</h1>
+          </div>
+          <p class="mb-5">
+            Sebuah aplikasi yang membantu kamu untuk membuat jadwal kuliah,
+            jadwal mabar, jadwal makan, jadwal liga inggris, dan jadwal-jadwal
+            lainnya. Walaupun banyak error, setidaknya kami sudah berusaha
+            semaksimal mungkin.
+          </p>
+          <p class="mb-2">Design By Muhammad Nauval Azhar</p>
+          <p class="mb-2">Code By Azam Din Abdillah</p>
+          <!-- <p>Design By Collosal LLC</p> -->
         </div>
-        <div class="mt-8 md:mt-0 flex flex-col gap-2 text-slate-500 font-medium">
-            <h1 class="font-semibold text-lg mb-2 text-slate-900">Sitemap</h1>
-            <p>Web Development</p>
-            <p>App Development</p>
-            <p>UI Design</p>
-            <p>Consultation</p>
-            <p>Maintenance</p>
+        <div
+          class="mt-8 md:mt-0 flex flex-col gap-2 text-slate-500 font-medium"
+        >
+          <h1 class="font-semibold text-lg mb-2 text-slate-900">Sitemap</h1>
+          <p>Web Development</p>
+          <p>App Development</p>
+          <p>UI Design</p>
+          <p>Consultation</p>
+          <p>Maintenance</p>
         </div>
-        <div class="mt-8 md:mt-0 flex flex-col gap-2 text-slate-500 font-medium">
-            <h1 class="font-semibold text-lg mb-2 text-slate-900">Partner</h1>
-            <p>Sefan.ru</p>
-            <p>Ganool</p>
-            <p>Waptrick</p>
-            <p>Stafaband</p>
-            <p>MyWapBlog</p>
-            <p>Friv</p>
+        <div
+          class="mt-8 md:mt-0 flex flex-col gap-2 text-slate-500 font-medium"
+        >
+          <h1 class="font-semibold text-lg mb-2 text-slate-900">Partner</h1>
+          <p>Sefan.ru</p>
+          <p>Ganool</p>
+          <p>Waptrick</p>
+          <p>Stafaband</p>
+          <p>MyWapBlog</p>
+          <p>Friv</p>
         </div>
-        <div class="mt-8 md:mt-0 flex flex-col gap-2 text-slate-500 font-medium">
-            <h1 class="font-semibold text-lg mb-2 text-slate-900">Tetep Terhubung</h1>
-            <p>Lihat kami pansos di sosial media berikut:</p>
-            <div class="flex justify-start gap-2 mt-3 items-center">
-                <img src="img/facebook-footer.png" alt="">
-                <img src="img/twitter-footer.png" alt="">
-                <img src="img/instagram-footer.png" alt="">
-            </div>
+        <div
+          class="mt-8 md:mt-0 flex flex-col gap-2 text-slate-500 font-medium"
+        >
+          <h1 class="font-semibold text-lg mb-2 text-slate-900">
+            Tetep Terhubung
+          </h1>
+          <p>Lihat kami pansos di sosial media berikut:</p>
+          <div class="flex justify-start gap-2 mt-3 items-center">
+            <img src="img/facebook-footer.png" alt="" />
+            <img src="img/twitter-footer.png" alt="" />
+            <img src="img/instagram-footer.png" alt="" />
+          </div>
         </div>
-    </section>
-
+      </section>
+    </div>
 
     <script>
-        let navDiv = document.getElementsByClassName('navDiv')[0];
-        let btnNav = document.querySelector('.btnNav');
-        let open = document.querySelector('.open');
-        let menuNav = document.querySelector('.menuNav');
+      let navDiv = document.getElementsByClassName("navDiv")[0];
+      let btnNav = document.querySelector(".btnNav");
+      let open = document.querySelector(".open");
+      let menuNav = document.querySelector(".menuNav");
 
-        btnNav.addEventListener('click', function(){
-            if (navDiv.classList.contains('pb-2')) {
-                navDiv.classList.replace('pb-2', 'pb-10');
-                navDiv.classList.replace('animate-anim-navbar-close', 'animate-anim-navbar');
+      btnNav.addEventListener("click", function () {
+        if (navDiv.classList.contains("pb-2")) {
+          navDiv.classList.replace("pb-2", "pb-10");
+          navDiv.classList.replace(
+            "animate-anim-navbar-close",
+            "animate-anim-navbar"
+          );
 
-                setTimeout(function(){
-                    menuNav.classList.replace('hidden', 'flex');
-                }, 200)
+          setTimeout(function () {
+            menuNav.classList.replace("hidden", "flex");
+          }, 200);
+        } else {
+          navDiv.classList.replace("pb-10", "pb-2");
+          navDiv.classList.replace(
+            "animate-anim-navbar",
+            "animate-anim-navbar-close"
+          );
+          menuNav.classList.replace("flex", "hidden");
+        }
+      });
 
-            }else{
-                navDiv.classList.replace('pb-10', 'pb-2');
-                navDiv.classList.replace('animate-anim-navbar', 'animate-anim-navbar-close');
-                menuNav.classList.replace('flex', 'hidden');
+      // btnNav.addEventListener('click', function(){
 
-            }
-        });
+      // });
 
+      // btnNav.classList.add('open');
 
-        // btnNav.addEventListener('click', function(){
+      // if (btnNav.hasAttribute('src', 'img/navbar-icon-mobile.png')) {
+      //     btnNav.addEventListener('click', function(){
+      //         navDiv.classList.add('pb-40');
+      //         navDiv.classList.add('animate-anim-navbar');
+      //         btnNav.setAttribute('src', 'img/close-icon.png');
+      //         btnNav.classList.add('btnNavClose');
+      //         btnNav.classList.remove('open');
 
-        // });
+      //     });
+      // }
 
-            // btnNav.classList.add('open');
-
-            // if (btnNav.hasAttribute('src', 'img/navbar-icon-mobile.png')) {
-            //     btnNav.addEventListener('click', function(){
-            //         navDiv.classList.add('pb-40');
-            //         navDiv.classList.add('animate-anim-navbar');
-            //         btnNav.setAttribute('src', 'img/close-icon.png');
-            //         btnNav.classList.add('btnNavClose');
-            //         btnNav.classList.remove('open');
-
-                    
-                    
-            //     });
-            // }
-
-            
-            // if (btnNav.hasAttribute('src', 'img/close-icon.png')) {
-            //             let close = document.querySelector('.bntNavClose');
-            //             close.addEventListener('click', function(){
-            //                 navDiv.classList.add('pt-40');
-            //             });
-            //         }
-
-            
-            
-
+      // if (btnNav.hasAttribute('src', 'img/close-icon.png')) {
+      //             let close = document.querySelector('.bntNavClose');
+      //             close.addEventListener('click', function(){
+      //                 navDiv.classList.add('pt-40');
+      //             });
+      //         }
     </script>
-</body>
+  </body>
 </html>
